@@ -37,7 +37,7 @@
 <p align="justify">Para comprobar que el container se había creado correctamente, procedí a ejecutar el comando <em>ffmpeg -i VideoFinal.mp4</em> (VideoFinal = audios_subs_video.mp4) donde vi:</p>
 
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-1/FOTOS/resultContainer.png" width="600"/>
+  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-1/FOTOS/resultContainer.png" width="700"/>
 </p>
 
 <p align="justify">Y como podemos ver contiene el video del fragmento de 1 minuto que recortamos en el paso 1, los dos audios, uno mono y el otro con un bajo bitrate, y los subtítulos. </p>
@@ -64,7 +64,7 @@
 ##### **Resultados**
 
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-2/FOTOS/resultados.png" width="600"/>
+  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-2/FOTOS/resultados.png" width="700"/>
 </p>
 
 <p align="justify">Como podemos ver, de igual forma que en ejercicio 1, obtenemos el container final con todos los componentes, el video que previamente extraíamos sin audio, los dos tracks de audio, mono y con bajo bitrate, y los subtítulos. </p>
@@ -103,19 +103,19 @@
 ##### **Video que le pasamos al Script**
 
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/VideoQLePasamos.png" width="900"/>
+  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/VideoQLePasamos.png" width="600"/>
 </p>
 
 ##### **Resultados: Ejemplo-1**
 
 ###### **Input**
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/ejemplo-1.png" width="900"/>
+  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/ejemplo-1.png" width="700"/>
 </p>
 
 ###### **Output**
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/resultEjemplo-1.png" width="400"/>
+  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/resultEjemplo-1.png" width="700"/>
 </p>
 
 <p align="justify">Como podemos ver, en el primer ejemplo, dado que nos encontramos con el codec de video h.265, éste no se ajusta con ningún tipo de broadcasting, por lo tanto, se nos muestra por pantalla que ninguno se ajusta.</p>
@@ -124,12 +124,12 @@
 
 ###### **Input**
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/ejemplo-2.png" width="900"/>
+  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/ejemplo-2.png" width="700"/>
 </p>
 
 ###### **Output**
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/resultEjemplo-2.png" width="400"/>
+  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/resultEjemplo-2.png" width="700"/>
 </p>
 
 <p align="justify">En cambio para el segundo ejemplo, la combinación de codecs entre MPEG2 y AAC, y MPEG2 y AC-3, nos da lugar a que los broadcasting que se adaptan son: ISDB, DVB y DTMB para la primera combinación y ATSC, DVB y DTMB para la segunda. </p>
@@ -147,7 +147,7 @@
 <p align="justify">Creada la clase y utilizada como: <em>función = Ejercicio5()</em>, procedí a hacer el mismo proceso que en los ejercicios anteriores: crear un bucle de tipo <em>while</em> para que el usuario pueda ejecutar el script todas las veces que lo requiera sin tener que salir de la pantalla de ejecución del script. </p>
 
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-5/intro-ejericio-5.png" width="400"/>
+  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-5/intro-ejericio-5.png" width="700"/>
 </p>
 
 <p align="justify">Dentro del bucle se le pregunta al usuario cuál de los ejercicios quiere realizar y según su respuesta se realiza con condicional y se procede a llamar a la función mediante la clase creada: <em>funcion.ejX()</em> (X=1 (Ejercicio 2 de la práctica), X=2 (Ejercicio 3 de la práctica), X=3 (Ejercicio 4 de la práctica)).</p>
