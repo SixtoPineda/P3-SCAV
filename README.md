@@ -26,7 +26,7 @@
 <p align="justify">que nos añadía los subtítulos al video sin audio de tal forma que al ejecutar el video podíamos activar o desactivar éstos.<br>Por último busqué la forma de añadir dos tracks de audio del mismo modo que los subtítulos, mediante el menú de ejecución poder escoger entre un track u otro. Mediante la fuente (5) encontré el comando:</p>
 <p align="center">ffmpeg -i input.mp4 -i audio1.mp3 -i audio2.mp3 -map 0 -map 1 -map 2 -codec copy output.mp4</p>
 <p align="justify">que nos añadía ambos audios de igual forma que los subtítulos, pudiendo escoger al ejecutar el video final.</p>
-<p align="justify">Fuentes:<br>(1) https://superuser.com/questions/826669/ffmpeg-get-mono-wav-audio-8khz-16-bit-out-of-mp4-video <br>(2) https://stackoverflow.com/questions/42947957/how-convert-high-bitrate-mp3-to-lower-rate-using-ffmpeg-in-android <br>
+<p align="left">Fuentes:<br>(1) https://superuser.com/questions/826669/ffmpeg-get-mono-wav-audio-8khz-16-bit-out-of-mp4-video <br>(2) https://stackoverflow.com/questions/42947957/how-convert-high-bitrate-mp3-to-lower-rate-using-ffmpeg-in-android <br>
 (3) https://sites.google.com/site/chrisfoo/subtitles <br>
 (4) https://www.enmimaquinafunciona.com/pregunta/120105/usar-ffmpeg-para-anadir-subtitulos-a-un-archivo-de-video-m4v <br>
 (5) https://superuser.com/questions/508331/ffmpeg-add-two-audio-streams-to-video <br>
@@ -144,7 +144,7 @@
 ##### **Script en EJERCICIO-5 como ej_5.py**
 
 <p align="justify">Realizados todos los ejercicios, únicamente nos quedaba unificarlos todos en un solo shader creando una clase en un script de python. </p>
-<p align="justify">Para ello, creamos una clase llamada <em>Ejericio5</em> donde definíamos 3 funciones, una para cada uno de los ejercicios anteriores implementados en python. Cabe decir que a cada una de las funciones debíamos pasarle como parámetros <em>self</em> con la finalidad de realizar dichas funciones al ejecutarlas mediante la clase. </p>
+<p align="justify">Para ello, creamos una clase llamada <em>Ejericio5</em> (1) donde definíamos 3 funciones, una para cada uno de los ejercicios anteriores implementados en python. Cabe decir que a cada una de las funciones debíamos pasarle como parámetros <em>self</em> (2) con la finalidad de realizar dichas funciones al ejecutarlas mediante la clase. </p>
 <p align="justify">Creada la clase y utilizada como: <em>función = Ejercicio5()</em>, procedí a hacer el mismo proceso que en los ejercicios anteriores: crear un bucle de tipo <em>while</em> para que el usuario pueda ejecutar el script todas las veces que lo requiera sin tener que salir de la pantalla de ejecución del script. </p>
 
 <p align="center">
@@ -158,4 +158,4 @@
 * X=3 (Ejercicio 4 de la práctica)).
 
 
-<p align="justify">Fuentes:<br>https://stackoverflow.com/questions/60461651/typeerror-takes-0-positional-arguments-but-1-was-given<br>https://www.w3schools.com/python/python_classes.asp</p>
+<p align="justify">Fuentes:<br>(1) https://www.w3schools.com/python/python_classes.asp <br>(2) https://stackoverflow.com/questions/60461651/typeerror-takes-0-positional-arguments-but-1-was-given</p>
