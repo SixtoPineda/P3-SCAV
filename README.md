@@ -96,45 +96,60 @@
 ### EJERCICIO-4
 #### ***Python: Generate container to launch against exercise 3***
 
-<p align="justify">Con el fin de dar la posibilidad de cambiar el tipo de codec del archivo del usuario, daremos la posibilidad de que éste introduzca un video con audio, un audio o un video sin audio. A partir de aquí, crearemos condicionales según el tipo de archivo introducido. Con el fin de poder saber que tipo de archivo ha sido introducido, usaremos una función de <em>subprocess</em> llamada <em>check_output</em>, que nos devuelve la salida del comando realizado. Por esta razón ejecutaremos el comando:<br><em>ffprobe -v error -show_entries stream=codec_type -of default=noprint_wrappers=1 {in_file}</em><br> y de esta forma saber de que tipo de codec se trata. Si la salida de este archivo es que tenemos un codec de tipo audio solo, el archivo es un audio, si se trata de video solo, se tratará de un video sin audio, pero si nos devuelve dos tipos de codec, audio y video, significará que se nos pasó un video con canal de audio también.<br>A partir de aquí ya sabemos con que tipo de archivo nos encontramos, por lo tanto, podemos empezar a mostrar las opciones para cada caso:</p>
+<p align="justify">En este ejercicio se nos pedía unificar dos funcionalidades: crear un container y saber que tipo de broadcasting mejor se adapta. Por lo tanto, junté ambos scripts de los dos ejercicios anteriores en uno.</p>
+<p align="justify">La única diferencia respecto los códigos anteriores tiene que ver con el ejercicio 2. Dado que queremos crear un container y luego verificar que broadcasting mejor se adapta, decidí dar la opción al usuario de que pueda escoger qué codec poner al video de 1 minuto, al audio mono y al de bajo bitrate. De este modo, al pasar el container resultante de dicho proceso, podemos obtener diferentes combinaciones de broadcasting, según los códecs escogidos por el usuario.</p>
+<p align="justify"></p>
 
-<p align="justify">&nbsp;- Video (video y audio): en este caso daremos la posibilidad de cambiar el codec del video únicamente, el audio o de ambos.<br>&nbsp;&nbsp;&nbsp;·Codec video: Damos la opción de cambiar entre MPEG-1, MPEG-2, MPEG4 y h.264. Realizaremos el cambio con el comando:</p><p align="center">ffmpeg -i {in_file} -c:v <strong>new_codec</strong> MPEG1_{in_file}</p>
+##### **Video que le pasamos al Script**
 
-<p align="justify">&nbsp;&nbsp;&nbsp;·Codec audio:  Damos la opción de cambiar entre MP3 y AAC. Realicaremos el cambio con el comando:</p><p align="center">ffmpeg -i {in_file} -acodec <strong>new_codec</strong> -vcodec copy MP3_{in_file}</p>
-
-<p align="justify">&nbsp;&nbsp;&nbsp;·Codec video y audio:  Damos la opción de cambiar entre todas las posibilidades anteriores. Realizaremos el cambio con el comando:</p><p align="center">ffmpeg -i {in_file} -c:v <strong>video_codec</strong> -c:a <strong>audio_codec</strong> MPEG1_MP3_{in_file}</p>
-
-<p align="justify">&nbsp;- Audio: en este caso daremos la posibilidad de cambiar el codec del audio únicamente. <br>&nbsp;&nbsp;&nbsp;·Codec audio: Damos la opción de cambiar entre MP3 y AAC. Realizaremos el cambio con el comando:</p><p align="center">ffmpeg -i {in_file} -c:a <strong>new_codec</strong> output.mp3</p>
-
-<p align="justify">&nbsp;- Video sin audio: en este caso daremos la posibilidad de cambiar el codec del video únicamente. <br>&nbsp;&nbsp;&nbsp;·Codec video: Damos la opción de cambiar entre MPEG-1, MPEG-2, MPEG4 y h.264. Realizaremos el cambio con el comando:</p><p align="center">ffmpeg -i {in_file} -c:v <strong>new_codec</strong> MPEG1_{in_file}</p>
-
-
-##### **Resultados**
-
-###### **VIDEO**
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P2-SCAV/blob/main/EJERCICIO-4/result_video_ej_4.png" width="900"/>
+  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/VideoQLePasamos.png" width="900"/>
 </p>
 
-###### **AUDIO**
+##### **Resultados: Ejemplo-1**
+
+###### **Input**
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P2-SCAV/blob/main/EJERCICIO-4/result_audio_ej_4.png" width="400"/>
+  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/ejemplo-1.png" width="900"/>
 </p>
 
-###### **VIDEO SIN AUDIO**
+###### **Output**
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P2-SCAV/blob/main/EJERCICIO-4/result_videosinAudio_ej_4.png" width="500"/>
+  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/resultEjemplo-1.png" width="400"/>
 </p>
 
-<p align="justify">Como podemos ver en las capturas, el archivo final corresponde con la solicitud de cambio de codec por parte del usuario. </p>
+<p align="justify">Como podemos ver, en el primer ejemplo, dado que nos encontramos con el codec de video h.265, éste no se ajusta con ningún tipo de broadcasting, por lo tanto, se nos muestra por pantalla que ninguno se ajusta.</p>
+
+##### **Resultados: Ejemplo-2**
+
+###### **Input**
+<p align="center">
+  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/ejemplo-2.png" width="900"/>
+</p>
+
+###### **Output**
+<p align="center">
+  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/resultEjemplo-2.png" width="400"/>
+</p>
+
+<p align="justify">En cambio para el segundo ejemplo, la combinación de codecs entre MPEG2 y AAC, y MPEG2 y AC-3, nos da lugar a que los broadcasting que se adaptan son: ISDB, DVB y DTMB para la primera combinación y ATSC, DVB y DTMB para la segunda. </p>
 
 
 ### EJERCICIO-5
 #### ***Python: Integrate everything inside a class***
 
-<p align="justify">Con la finalidad de integrar todos los ejercicios anteriores realizamos lo siguiente:</p>
-<p align="justify">Haremos un menú. En éste le pedimos que el usuario nos de una archivo con el que trabajar. Comprobamos si se trata de un video con audio o sin, una imagen o un audio. A partir de aquí le mostramos por pantalla la información que consideramos importante según el archivo: Audio (codec), Video con audio (codecs y resolución), Video sin audio (codec y resolución) e imagen (resolución).<br>Hecho esto le preguntamos al usuario que quiere realizar según el archivo dado. En el caso de ser un video, podemos modificar su/s codec/s o cambiar la resolucón, en el audio cambiar únicamente el codec o en el caso de la imagen cambiar la resolución. A partir de aquí integramos los comandos anteriormente mencionados según las opciones escogidas por el usuario.<br>Cabe decir que todo esto se integra dentro de un bucle de tipo <em>while</em> donde el usuario pude escoger salir del menú o contiunar pasando archivos y modificándolos.<br><br>Dentro de la carpeta <em>EJERCICIO-5</em> he añadido el video BBB.mp4 que hace referencia al video original de 10 segundos, el video bbb.mp4 que representa el video sin audio, una imagen img.jpg con la que también poder probar el código, y un audio audio.wav con el que poder trabajar. </p>
+
 
 ##### **Script en EJERCICIO-5 COMO ej_5.py**
 
+<p align="justify">Realizados todos los ejercicios, únicamente nos quedaba unificarlos todos en un solo shader creando una clase en un script de python. </p>
+<p align="justify">Para ello, creamos una clase llamada <em>Ejericio5</em> donde definíamos 3 funciones, una para cada uno de los ejercicios anteriores implementados en python. Cabe decir que a cada una de las funciones debíamos pasarle como parámetros <em>self</em> con la finalidad de realizar dichas funciones al ejecutarlas mediante la clase. </p>
+<p align="justify">Creada la clase y utilizada como: <em>función = Ejercicio5()</em>, procedí a hacer el mismo proceso que en los ejercicios anteriores: crear un bucle de tipo <em>while</em> para que el usuario pueda ejecutar el script todas las veces que lo requiera sin tener que salir de la pantalla de ejecución del script. </p>
 
+<p align="center">
+  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-5/intro-ejericio-5.png" width="400"/>
+</p>
+
+<p align="justify">Dentro del bucle se le pregunta al usuario cuál de los ejercicios quiere realizar y según su respuesta se realiza con condicional y se procede a llamar a la función mediante la clase creada: <em>funcion.ejX()</em> (X=1 (Ejercicio 2 de la práctica), X=2 (Ejercicio 3 de la práctica), X=3 (Ejercicio 4 de la práctica)).</p>
+
+<p align="justify">Fuentes:<br>https://stackoverflow.com/questions/60461651/typeerror-takes-0-positional-arguments-but-1-was-given<br>https://www.w3schools.com/python/python_classes.asp</p>
