@@ -145,13 +145,13 @@
 
 <p align="justify">Realizados todos los ejercicios, únicamente nos quedaba unificarlos todos en un solo shader creando una clase en un script de python. </p>
 <p align="justify">Para ello, creamos una clase llamada <em>Ejericio5</em> (1) donde definíamos 3 funciones, una para cada uno de los ejercicios anteriores implementados en python. Cabe decir que a cada una de las funciones debíamos pasarle como parámetros <em>self</em> (2) con la finalidad de realizar dichas funciones al ejecutarlas mediante la clase. </p>
-<p align="justify">Creada la clase y utilizada como: <em>función = Ejercicio5()</em>, procedí a hacer el mismo proceso que en los ejercicios anteriores: crear un bucle de tipo <em>while</em> para que el usuario pueda ejecutar el script todas las veces que lo requiera sin tener que salir de la pantalla de ejecución del script. </p>
+<p align="justify">Creada la clase y utilizada como: <em>función = Ejercicio5()</em> (1), procedí a hacer el mismo proceso que en los ejercicios anteriores: crear un bucle de tipo <em>while</em> para que el usuario pueda ejecutar el script todas las veces que lo requiera sin tener que salir de la pantalla de ejecución del script. </p>
 
 <p align="center">
   <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-5/intro-ejericio-5.png" width="700"/>
 </p>
 
-<p align="justify">Dentro del bucle se le pregunta al usuario cuál de los ejercicios quiere realizar y según su respuesta se realiza con condicional y se procede a llamar a la función mediante la clase creada: <em>funcion.ejX()</em>.</p>
+<p align="justify">Dentro del bucle se le pregunta al usuario cuál de los ejercicios quiere realizar y según su respuesta se realiza con condicional y se procede a llamar a la función mediante la clase creada: <em>funcion.ejX()</em> (1).</p>
 
 * X=1 (Ejercicio 2 de la práctica)
 * X=2 (Ejercicio 3 de la práctica)
