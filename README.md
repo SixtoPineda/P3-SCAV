@@ -72,24 +72,26 @@
 ### EJERCICIO-3
 #### ***Python: Which broadcasting standard would fit***
 
-<p align="justify">Igual que en la práctica 1 y el seminario 2 escalando el input (video o imagen) podemos cambiar la resolución de éstos. Por ello, con el siguiente comando podemos redimensionar cualquier archivo de entrada: </p><p align="center"><em>ffmpeg -i {in_file} -vf <strong>scale={width}:{height}</strong> {width}x{height}-{in_file}</em></p><p align="justify">Observamos que <em>in_file</em> hace referencia al archivo de entrada del usuario y, <em>width y height</em> son la nueva resolución del archivo <em>WIDTHxHEIGHT</em>. </p><p align="justify">Fuente: <em>Práctica 1 y Seminario 2</em></p>
+<p align="justify">A continuación se nos pedía que dado un video pasado a nuestro script, podamos retornar por pantalla los <em>broadcasting</em> que se adaptan a éste según los códecs de video y audio que tiene el archivo pasado.</p>
+<p align="justify">Para ello, me basé en las slides T3 explicadas en clase, y partir de aquí realizar una combinación de condicionales donde según el codec de video y audio que tenga el fichero dado, podremos deducir qué <em>broadcasting</em> se adapta mejor.</p>
+<p align="justify">Recordemos que:</p>
+
+* DVB: Video (MPEG2 y h.264) y Audio (AAC, AC-3 y MP3)
+* ISDB: Video (MPEG2 y h.264) y Audio (AAC)
+* ATSC: Video (MPEG2 y h.264)  y Audio (AC-3)
+* DTMB: Video (AVS, AVS+, MPEG2 y h.264)  y Audio (DRA, AAC, AC-3, MP2 y MP3)
 
 ##### **Resultados**
 
-###### **IMAGEN**
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P2-SCAV/blob/main/EJERCICIO-3/result_img_ej_3.png" width="600"/>
+  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-3/FOTOS/VideoQLePasamos.png" width="600"/>
 </p>
 
-###### **VIDEO**
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P2-SCAV/blob/main/EJERCICIO-3/result_video_ej_3.png" width="600"/>
+  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-3/FOTOS/result-3.png" width="600"/>
 </p>
 
-
-
-
-<p align="justify">Como podemos ver en ambas captura, según los datos dados por el usuario, obtenemos la salida reescalada correspondiente.</p>
+<p align="justify">Como podemos ver, dado que el codec del video es h.264 y el del audio es AAC, tal y como se ve en las propiedades del video, los broadcasting que mejor se adaptan a este video son: DVB, ISDB y DTMB. </p>
 
 ### EJERCICIO-4
 #### ***Python: Generate container to launch against exercise 3***
