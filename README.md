@@ -41,6 +41,7 @@
 </p>
 
 <p align="justify">Y como podemos ver contiene el video del fragmento de 1 minuto que recortamos en el paso 1, los dos audios, uno mono y el otro con un bajo bitrate, y los subtítulos. </p>
+<p align="justify"><em>Resultado de cada Step del ejercicio en EJERCICIO-1/FOTOS</em></p>
 
 ### EJERCICIO-2
 #### ***Python: Automatize the creation of MP4 container***
