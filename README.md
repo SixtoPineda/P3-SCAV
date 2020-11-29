@@ -34,7 +34,7 @@
 
 ##### **Resultados**
 
-<p align="justify">Para comprobar que el container se había creado correctamente, procedí a ejecutar el comando ffmpeg -i VideoFinal.mp4 (VideoFinal = audios_subs_video.mp4) donde vi:</p>
+<p align="justify">Para comprobar que el container se había creado correctamente, procedí a ejecutar el comando <em>ffmpeg -i VideoFinal.mp4</em> (VideoFinal = audios_subs_video.mp4) donde vi:</p>
 
 <p align="center">
   <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-1/FOTOS/resultContainer.png" width="600"/>
@@ -45,15 +45,29 @@
 ### EJERCICIO-2
 #### ***Python: Automatize the creation of MP4 container***
 
-<p align="justify">Para este ejercicio reciclé código del <em>Seminario 2</em>:</p><p align="center"><em>ffmpeg -i {name_video}.mp4 -vf scale={scaleValue[i]} {nameVideo[i]}.mp4 </em></p><p align="justify">Donde <em>name_video</em> hace referencia al nombre del video con el que quiere trabajar el usuario y <em>nameVideo[i]</em> representa la array contenedora de todos los nombres dados por el usuario para cada uno de los videos con distinta resolución.</p><p align="justify">Fuente: <em>Seminario 2</em></p>
+<p align="justify">En este apartado se nos pedía automatizar todos los pasos realizados en el ejercicio 1 en un solo script de python.<br>Para ello, decidí reutilizar código de prácticas anteriores. Creé un bucle de tipo <em>while</em> donde se le pide al usuario, tanto al iniciar la ejecución como al finalizarla, si éste quiere acabar con la ejecución o quiere seguir trabajando con el script con otro/s archivos más.<br>A partir de aquí, le pedimos al usuario que nos introduzca el nombre <strong>completo</strong> del video con en que realizar los pasos anteriores y crear un nuevo container. Una vez el usuario nos da el nombre de dicho archivo, procedemos a ejecutar cada uno de los comandos como he mencionad en el ejercicio 1, pero desde el fichero python con la función <em>subprocess.run</em>.<br>De igual forma que en anteriores prácticas, se pide al usuario que introduzca el nombre del archivo final, en este caso del container .mp4.<br>Cabe decir que al finalizar la ejecución del ejercicio borramos cada uno de los archivos generados para realizar el ejercicio y así solo dejar el resultado final en el container con extensión .mp4. </p>
+
+##### **Pasos**
+
+###### **1**
+
+<p align="center">
+  <img align="center" src="1.	https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-2/FOTOS/1-screen.png" width="600"/>
+</p>
+
+###### **2**
+
+<p align="center">
+  <img align="center" src="2.	https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-2/FOTOS/2-screen.png" width="600"/>
+</p>
 
 ##### **Resultados**
 
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P2-SCAV/blob/main/EJERCICIO-2/result_ej_2.png" width="600"/>
+  <img align="center" src="1.	https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-2/FOTOS/resultados.png" width="600"/>
 </p>
 
-<p align="justify">Como podemos ver en la captura se nos guardan cada uno de los videos reducidos en calidad con su respectivo nombre según haya sido asignado por el usuario. </p>
+<p align="justify">Como podemos ver, de igual forma que en ejercicio 1, obtenemos el container final con todos los componentes, el video que previamente extraíamos sin audio, los dos tracks de audio, mono y con bajo bitrate, y los subtítulos. </p>
 
 ### EJERCICIO-3
 #### ***Python: Which broadcasting standard would fit***
