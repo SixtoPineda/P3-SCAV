@@ -9,13 +9,28 @@
 
 <p align="justify">En este ejercicio se nos pedía crear un container con las siguientes componentes: </p>
 
+* Un corte de 1 minuto del video BBB, sin audio.
+* Un audio mono de 1 minuto del video BBB (mismo fragmento que en el anterior paso).
+* Un audio de 1 minuto del video BBB, pero al que le reducimos el bitrate (mismo fragmento que en los anteriores pasos).
+* Subtítulos de ese minuto recortado del video BBB. 
 
-* 
-    * Un corte de 1 minuto del video BBB, sin audio.
-    * Un audio mono de 1 minuto del video BBB (mismo fragmento que en el anterior paso).
-    * Un audio de 1 minuto del video BBB, pero al que le reducimos el bitrate (mismo fragmento que en los anteriores pasos).
-    * Subtítulos de ese minuto recortado del video BBB. 
-* 
+<p align="center">(Para realizar cada uno de estos pasos, reutilicé código de prácticas anteriores)</p>
+<p align="justify">Para el primer paso realizaremos el siguiente comando:</p>
+<p align="center">ffmpeg -ss <strong>00:00:00</strong>< -i input.mp4  -c copy -t <strong>00:01:00</strong> <strong>-an</strong> output.mp4</p>
+<p align="justify">como podemos ver, recortamos el primer minuto del video y con el comando -an eliminamos el audio de éste.<br>Para el segundo paso realizamos (1):</p>
+<p align="center">ffmpeg -ss 00:00:00 -i input.mp4  -t 00:01:00 <strong>-ac 1</strong> monoTrack.mp3</p>
+<p align="justify">nuevamente cortamos el primer minuto del video pero solo extraemos la parte de audio con -ac y con 1 obtenemos un audio de un solo canal, es decir mono. <br>A continuación ejecutaremos (2):</p>
+<p align="center">ffmpeg -ss 00:00:00 -i input.mp4  <strong>-b:a 50k</strong> -t 00:01:00 lowBitrate.mp3</p>
+<p align="justify">de igual forma que antes recortamos el primer minuto del video BBB, pero con <em>-b:a 50k</em> seleccionamos el bitrate del audio y se lo reducimos a 50kbps. Cabe decir que antes de realizar este paso, con el comando <em>ffmpeg -i NombreVideo </em>verifiqué que bitrate tenia el audio original para asegurarme que con 50kbps lo estaba reduciendo.<br>En el caso de los subtítulos (SUBTÍTULOS-BBB-VIDEO/sub.srt), los extraje de internet (3). Cabe decir que éstos no eran del todo precisos y los modifiqué un poco.<br>Con todos los componentes tan solo quedaba crear el container.<br>Para ello, busque los comandos que permitían añadir los subtítulos al video, pero que permitiese poder activarlos o no, puesto que hay comandos que añadían los subtítulos, pero no había forma de desactivarlos. Mediante la fuente (4) encontré el comando:</p>
+<p align="center">ffmpeg -i input.mp4  -i subtitles.srt -map 0 -map 1 -c copy -c:s mov_text output.mp4</p>
+<p align="justify">que nos añadía los subtítulos al video sin audio de tal forma que al ejecutar el video podíamos activar o desactivar éstos.<br>Por último busqué la forma de añadir dos tracks de audio del mismo modo que los subtítulos, mediante el menú de ejecución poder escoger entre un track u otro. Mediante la fuente (5) encontré el comando:</p>
+<p align="center">ffmpeg -i input.mp4 -i audio1.mp3 -i audio2.mp3 -map 0 -map 1 -map 2 -codec copy output.mp4</p>
+<p align="justify">que nos añadía ambos audios de igual forma que los subtítulos, pudiendo escoger al ejecutar el video final.</p>
+<p align="justify">Fuentes:<br>(1) https://superuser.com/questions/826669/ffmpeg-get-mono-wav-audio-8khz-16-bit-out-of-mp4-video <br>(2) https://stackoverflow.com/questions/42947957/how-convert-high-bitrate-mp3-to-lower-rate-using-ffmpeg-in-android <br>
+(3) https://sites.google.com/site/chrisfoo/subtitles <br>
+(4) https://www.enmimaquinafunciona.com/pregunta/120105/usar-ffmpeg-para-anadir-subtitulos-a-un-archivo-de-video-m4v <br>
+(5) https://superuser.com/questions/508331/ffmpeg-add-two-audio-streams-to-video <br>
+</p>
 
 
 ##### **Resultados**
