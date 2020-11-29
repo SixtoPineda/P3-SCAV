@@ -32,14 +32,15 @@
 (5) https://superuser.com/questions/508331/ffmpeg-add-two-audio-streams-to-video <br>
 </p>
 
-
 ##### **Resultados**
 
+<p align="justify">Para comprobar que el container se había creado correctamente, procedí a ejecutar el comando ffmpeg -i VideoFinal.mp4 (VideoFinal = audios_subs_video.mp4) donde vi:</p>
+
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P2-SCAV/blob/main/EJERCICIO-1/result_ej_1.png" width="600"/>
+  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-1/FOTOS/resultContainer.png" width="600"/>
 </p>
 
-<p align="justify">Como podemos ver en la captura, se nos muestra el tipo de codec del video: h.264, el codec del audio: AAC, la duración: 10.6s, y el bitRate: 6737785 bps. </p>
+<p align="justify">Y como podemos ver contiene el video del fragmento de 1 minuto que recortamos en el paso 1, los dos audios, uno mono y el otro con un bajo bitrate, y los subtítulos. </p>
 
 ### EJERCICIO-2
 #### ***Python: Automatize the creation of MP4 container***
