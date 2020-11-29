@@ -7,12 +7,15 @@
 ### EJERCICIO-1
 #### ***Create a new BBB container***
 
-<p align="justify">Con el fin de mostrar tres de los datos más importantes que contiene el container procedí a ejecutar un comando desde el terminal usando <em>ffmpeg</em>. Este comando lo encontré en la própia página de <em>FFmpeg</em>:</p><p align="center"><em>ffprobe -v error -show_entries <strong>format=bit_rate:format=duration:stream=codec_long_name</strong> -of default=noprint_wrappers=1 {archivo}</em></p><p align="justify">Donde podemos ver que mostramos la información del bitrate del video, su duración, y el tipo de codec, donde se mostrará el codec del video y del audio que contiene éste. </p><p align="justify">Fuente:<br>https://trac.ffmpeg.org/wiki/FFprobeTips</p>
+<p align="justify">En este ejercicio se nos pedía crear un container con las siguientes componentes: </p>
 
-* Bullet list
-    * Nested bullet
-        * Sub-nested bullet etc
-* Bullet list item 2
+
+* 
+    * Un corte de 1 minuto del video BBB, sin audio.
+    * Un audio mono de 1 minuto del video BBB (mismo fragmento que en el anterior paso).
+    * Un audio de 1 minuto del video BBB, pero al que le reducimos el bitrate (mismo fragmento que en los anteriores pasos).
+    * Subtítulos de ese minuto recortado del video BBB. 
+* 
 
 
 ##### **Resultados**
