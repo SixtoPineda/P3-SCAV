@@ -22,10 +22,10 @@
 ##### **Resultados**
 
 <p align="center">
-  <img src="https://github.com/SixtoPineda/S3-SCAV/blob/main/EJERCICIO-1/FOTOS/vp8.png" width="350">
-  <img src="https://github.com/SixtoPineda/S3-SCAV/blob/main/EJERCICIO-1/FOTOS/VP9.png" width="350">
-  <img src="https://github.com/SixtoPineda/S3-SCAV/blob/main/EJERCICIO-1/FOTOS/H265.png" width="350">
-  <img src="https://github.com/SixtoPineda/S3-SCAV/blob/main/EJERCICIO-1/FOTOS/AV1.png" width="350">
+  <img src="https://github.com/SixtoPineda/S3-SCAV/blob/main/EJERCICIO-1/FOTOS/vp8.png" width="400">
+  <img src="https://github.com/SixtoPineda/S3-SCAV/blob/main/EJERCICIO-1/FOTOS/VP9.png" width="400">
+  <img src="https://github.com/SixtoPineda/S3-SCAV/blob/main/EJERCICIO-1/FOTOS/H265.png" width="400">
+  <img src="https://github.com/SixtoPineda/S3-SCAV/blob/main/EJERCICIO-1/FOTOS/AV1.png" width="400">
 </p>
 
 
