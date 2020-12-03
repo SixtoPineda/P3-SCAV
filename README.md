@@ -1,4 +1,4 @@
-# ***SCAV: P3-Python & Video***
+# ***SCAV: P3-Streaming and final exercises***
 
 ## **EJERCICIOS**
 
