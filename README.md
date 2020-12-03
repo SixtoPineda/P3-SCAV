@@ -42,7 +42,7 @@
 ##### **Resultados**
 
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/S3-SCAV/blob/main/EJERCICIO-2/result.png" width="700"/>
+  <img align="center" src="https://github.com/SixtoPineda/S3-SCAV/blob/main/EJERCICIO-2/result.png" />
 </p>
 
 <p align="justify">Como podemos ver, el container final tiene los 4 videos, y con sus respectivos audios y codecs. </p>
