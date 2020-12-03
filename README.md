@@ -21,14 +21,16 @@
 
 ##### **Resultados**
 
-<p align="justify">Para comprobar que el container se había creado correctamente, procedí a ejecutar el comando <em>ffmpeg -i VideoFinal.mp4</em> (VideoFinal = audios_subs_video.mp4) donde vi:</p>
-
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-1/FOTOS/resultContainer.png" width="700"/>
+  <img src="https://github.com/SixtoPineda/S3-SCAV/blob/main/EJERCICIO-1/FOTOS/vp8.png" width="350">
+  <img src="https://github.com/SixtoPineda/S3-SCAV/blob/main/EJERCICIO-1/FOTOS/VP9.png" width="350">
+  <img src="https://github.com/SixtoPineda/S3-SCAV/blob/main/EJERCICIO-1/FOTOS/H265.png" width="350">
+  <img src="https://github.com/SixtoPineda/S3-SCAV/blob/main/EJERCICIO-1/FOTOS/AV1.png" width="350">
 </p>
 
-<p align="justify">Y como podemos ver contiene el video del fragmento de 1 minuto que recortamos en el paso 1, los dos audios, uno mono y el otro con un bajo bitrate, y los subtítulos. </p>
-<p align="justify"><em>Resultado de cada Step del ejercicio en EJERCICIO-1/FOTOS</em></p>
+
+<p align="justify">Como podemos ver, cada video corresponde con su respectiva resolución como se ha mencionado anteriormente al inicio del ejercicio.</p>
+<p align="justify"><em>Resultado de cada video del ejercicio en EJERCICIO-1/FOTOS</em></p>
 
 ### EJERCICIO-2
 #### ***Container of the 4 videos***
