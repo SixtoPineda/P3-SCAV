@@ -46,32 +46,22 @@
 </p>
 
 <p align="justify">Como podemos ver, el container final tiene los 4 videos, y con sus respectivos audios y codecs. </p>
-
+<p align="justify">EXPLICAICÓN DE BITRATE Y ESO</p>
 
 ### EJERCICIO-4
 #### ***Python: The online streaming***
 
 <p align="justify">En este ejercicio se nos pedía unificar dos funcionalidades: crear un container y saber que tipo de broadcasting mejor se adapta. Por lo tanto, junté ambos scripts de los dos ejercicios anteriores en uno.</p>
-<p align="justify">La única diferencia respecto los códigos anteriores tiene que ver con el ejercicio 2. Dado que queremos crear un container y luego verificar que broadcasting mejor se adapta, decidí dar la opción al usuario de que pueda escoger qué codec poner al video de 1 minuto, al audio mono y al de bajo bitrate. De este modo, al pasar el container resultante de dicho proceso, podemos obtener diferentes combinaciones de broadcasting, según los códecs escogidos por el usuario.</p>
-<p align="justify"></p>
 
-##### **Video que le pasamos al Script**
 
-<p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/VideoQLePasamos.png" width="600"/>
-</p>
 
-##### **Resultados: Ejemplo-1**
 
-###### **Input**
+##### **Resultados**
+
 <p align="center">
   <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/ejemplo-1.png" width="700"/>
 </p>
 
-###### **Output**
-<p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/resultEjemplo-1.png" width="700"/>
-</p>
 
 <p align="justify">Como podemos ver, en el primer ejemplo, dado que nos encontramos con el codec de video h.265, éste no se ajusta con ningún tipo de broadcasting, por lo tanto, se nos muestra por pantalla que ninguno se ajusta.</p>
 
