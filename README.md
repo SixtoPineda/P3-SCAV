@@ -16,7 +16,7 @@
 
 <p align="center">(Para realizar cada uno de estos pasos, reutilicé código de prácticas anteriores)</p>
 <p align="justify">Reutilicé el código siguiente: </p>
-<p align="center">ffmpeg -i {inputVideo} -vf scale={width:high} -c:v {CodecType} {nameVideo}.mkv</p>
+<p align="center">ffmpeg -i <strong>{inputVideo}</strong> -vf scale=<strong>{width:high}</strong> -c:v <strong>{CodecType}</strong> <strong>{nameVideo}</strong>.mkv</p>
 <p align="justify">Donde le pedimos al usuario que nos introduzca el nombre del video con el que trabajar y realizo un bucle en python donde vamos creando cada uno de los videos mencionados anteriormente. Con este fin creé una lista con cada una de las resoluciones y sus respectivos códecs.</p>
 
 ##### **Resultados**
