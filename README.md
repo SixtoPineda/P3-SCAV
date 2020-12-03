@@ -35,23 +35,17 @@
 ### EJERCICIO-2
 #### ***Container of the 4 videos***
 
-<p align="justify">En este apartado se nos pedía automatizar todos los pasos realizados en el ejercicio 1 en un solo script de python.<br>Para ello, decidí reutilizar código de prácticas anteriores. Creé un bucle de tipo <em>while</em> donde se le pide al usuario, tanto al iniciar la ejecución como al finalizarla, si éste quiere acabar con la ejecución o quiere seguir trabajando con el script con otro/s archivos más.<br><br>A partir de aquí, le pedimos al usuario que nos introduzca el nombre <strong>completo</strong> del video con en que realizar los pasos anteriores y crear un nuevo container. Una vez el usuario nos da el nombre de dicho archivo, procedemos a ejecutar cada uno de los comandos como he mencionad en el ejercicio 1, pero desde el fichero python con la función <em>subprocess.run</em>.<br><br>De igual forma que en anteriores prácticas, se pide al usuario que introduzca el nombre del archivo final, en este caso del container .mp4.<br>Cabe decir que al finalizar la ejecución del ejercicio borramos cada uno de los archivos generados para realizar el ejercicio y así solo dejar el resultado final en el container con extensión .mp4. </p>
+<p align="justify">Con el fin de crear un container con los cuatro videos, reutilicé el código de la práctica 3 donde creábamos un container con varios audios. Por ello el comando es: </p>
 
-##### **Pasos**
-
-###### **1**
-
-<p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-2/FOTOS/1-screen.png" width="600"/>
-</p>
+<p align="center">ffmpeg -i {nameVideo[0]}.mkv -i {nameVideo[1]}.mkv -i {nameVideo[2]}.mkv -i {nameVideo[3]}.mkv -c copy -map 0 -map 1 -map 2 -map 3 4x1Container.mkv</p>
 
 ##### **Resultados**
 
 <p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-2/FOTOS/resultados.png" width="700"/>
+  <img align="center" src="https://github.com/SixtoPineda/S3-SCAV/blob/main/EJERCICIO-2/result.png" width="700"/>
 </p>
 
-<p align="justify">Como podemos ver, de igual forma que en ejercicio 1, obtenemos el container final con todos los componentes, el video que previamente extraíamos sin audio, los dos tracks de audio, mono y con bajo bitrate, y los subtítulos. </p>
+<p align="justify">Como podemos ver, el container final tiene los 4 videos, y con sus respectivos audios y codecs. </p>
 
 
 ### EJERCICIO-4
