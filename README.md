@@ -5,7 +5,7 @@
 **IMPORTANTE: cuando ejecutamos los fichero python, dado que se pide al ususario cierta interacción, una vez puesto en ejecución el script, debemos presionar F5 para poder ver la pantalla emergente (cmd) donde poder introducir la información y trabajar con el script.**
 
 ### EJERCICIO-1
-#### ***Create a new BBB container***
+#### ***Python: BBB video converted***
 
 <p align="justify">En este ejercicio se nos pedía crear un container con las siguientes componentes: </p>
 
@@ -44,7 +44,7 @@
 <p align="justify"><em>Resultado de cada Step del ejercicio en EJERCICIO-1/FOTOS</em></p>
 
 ### EJERCICIO-2
-#### ***Python: Automatize the creation of MP4 container***
+#### ***Container of the 4 videos***
 
 <p align="justify">En este apartado se nos pedía automatizar todos los pasos realizados en el ejercicio 1 en un solo script de python.<br>Para ello, decidí reutilizar código de prácticas anteriores. Creé un bucle de tipo <em>while</em> donde se le pide al usuario, tanto al iniciar la ejecución como al finalizarla, si éste quiere acabar con la ejecución o quiere seguir trabajando con el script con otro/s archivos más.<br><br>A partir de aquí, le pedimos al usuario que nos introduzca el nombre <strong>completo</strong> del video con en que realizar los pasos anteriores y crear un nuevo container. Una vez el usuario nos da el nombre de dicho archivo, procedemos a ejecutar cada uno de los comandos como he mencionad en el ejercicio 1, pero desde el fichero python con la función <em>subprocess.run</em>.<br><br>De igual forma que en anteriores prácticas, se pide al usuario que introduzca el nombre del archivo final, en este caso del container .mp4.<br>Cabe decir que al finalizar la ejecución del ejercicio borramos cada uno de los archivos generados para realizar el ejercicio y así solo dejar el resultado final en el container con extensión .mp4. </p>
 
@@ -56,12 +56,6 @@
   <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-2/FOTOS/1-screen.png" width="600"/>
 </p>
 
-###### **2**
-
-<p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-2/FOTOS/2-screen.png" width="600"/>
-</p>
-
 ##### **Resultados**
 
 <p align="center">
@@ -70,32 +64,9 @@
 
 <p align="justify">Como podemos ver, de igual forma que en ejercicio 1, obtenemos el container final con todos los componentes, el video que previamente extraíamos sin audio, los dos tracks de audio, mono y con bajo bitrate, y los subtítulos. </p>
 
-### EJERCICIO-3
-#### ***Python: Which broadcasting standard would fit***
-
-<p align="justify">A continuación se nos pedía que dado un video pasado a nuestro script, podamos retornar por pantalla los <em>broadcasting</em> que se adaptan a éste según los códecs de video y audio que tiene el archivo pasado.</p>
-<p align="justify">Para ello, me basé en las slides T3 explicadas en clase, y partir de aquí realizar una combinación de condicionales donde según el codec de video y audio que tenga el fichero dado, podremos deducir qué <em>broadcasting</em> se adapta mejor.</p>
-<p align="justify">Recordemos que:</p>
-
-* DVB: Video (MPEG2 y h.264) y Audio (AAC, AC-3 y MP3)
-* ISDB: Video (MPEG2 y h.264) y Audio (AAC)
-* ATSC: Video (MPEG2 y h.264)  y Audio (AC-3)
-* DTMB: Video (AVS, AVS+, MPEG2 y h.264)  y Audio (DRA, AAC, AC-3, MP2 y MP3)
-
-##### **Resultados**
-
-<p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-3/FOTOS/VideoQLePasamos.png" width="600"/>
-</p>
-
-<p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-3/FOTOS/result-3.png" width="600"/>
-</p>
-
-<p align="justify">Como podemos ver, dado que el codec del video es h.264 y el del audio es AAC, tal y como se ve en las propiedades del video, los broadcasting que mejor se adaptan a este video son: DVB, ISDB y DTMB. </p>
 
 ### EJERCICIO-4
-#### ***Python: Generate container to launch against exercise 3***
+#### ***Python: The online streaming***
 
 <p align="justify">En este ejercicio se nos pedía unificar dos funcionalidades: crear un container y saber que tipo de broadcasting mejor se adapta. Por lo tanto, junté ambos scripts de los dos ejercicios anteriores en uno.</p>
 <p align="justify">La única diferencia respecto los códigos anteriores tiene que ver con el ejercicio 2. Dado que queremos crear un container y luego verificar que broadcasting mejor se adapta, decidí dar la opción al usuario de que pueda escoger qué codec poner al video de 1 minuto, al audio mono y al de bajo bitrate. De este modo, al pasar el container resultante de dicho proceso, podemos obtener diferentes combinaciones de broadcasting, según los códecs escogidos por el usuario.</p>
@@ -121,41 +92,5 @@
 
 <p align="justify">Como podemos ver, en el primer ejemplo, dado que nos encontramos con el codec de video h.265, éste no se ajusta con ningún tipo de broadcasting, por lo tanto, se nos muestra por pantalla que ninguno se ajusta.</p>
 
-##### **Resultados: Ejemplo-2**
-
-###### **Input**
-<p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/ejemplo-2.png" width="700"/>
-</p>
-
-###### **Output**
-<p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-4/FOTOS/resultEjemplo-2.png" width="700"/>
-</p>
-
-<p align="justify">En cambio para el segundo ejemplo, la combinación de codecs entre MPEG2 y AAC, y MPEG2 y AC-3, nos da lugar a que los broadcasting que se adaptan son: ISDB, DVB y DTMB para la primera combinación y ATSC, DVB y DTMB para la segunda. </p>
 
 
-### EJERCICIO-5
-#### ***Python: Integrate everything inside a class***
-
-
-
-##### **Script en EJERCICIO-5 como ej_5.py**
-
-<p align="justify">Realizados todos los ejercicios, únicamente nos quedaba unificarlos todos en un solo shader creando una clase en un script de python. </p>
-<p align="justify">Para ello, creamos una clase llamada <em>Ejericio5</em> (1) donde definíamos 3 funciones, una para cada uno de los ejercicios anteriores implementados en python. Cabe decir que a cada una de las funciones debíamos pasarle como parámetros <em>self</em> (2) con la finalidad de realizar dichas funciones al ejecutarlas mediante la clase. </p>
-<p align="justify">Creada la clase y utilizada como: <em>función = Ejercicio5()</em> (1), procedí a hacer el mismo proceso que en los ejercicios anteriores: crear un bucle de tipo <em>while</em> para que el usuario pueda ejecutar el script todas las veces que lo requiera sin tener que salir de la pantalla de ejecución del script. </p>
-
-<p align="center">
-  <img align="center" src="https://github.com/SixtoPineda/P3-SCAV/blob/main/EJERCICIO-5/intro-ejericio-5.png" width="700"/>
-</p>
-
-<p align="justify">Dentro del bucle se le pregunta al usuario cuál de los ejercicios quiere realizar y según su respuesta se realiza con condicional y se procede a llamar a la función mediante la clase creada: <em>funcion.ejX()</em> (1).</p>
-
-* X=1 (Ejercicio 2 de la práctica)
-* X=2 (Ejercicio 3 de la práctica)
-* X=3 (Ejercicio 4 de la práctica)).
-
-
-<p align="justify">Fuentes:<br>(1) https://www.w3schools.com/python/python_classes.asp <br>(2) https://stackoverflow.com/questions/60461651/typeerror-takes-0-positional-arguments-but-1-was-given</p>
